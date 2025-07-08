@@ -1,0 +1,223 @@
+{
+  "files": [
+    {
+      "path": "frontend/src/App.tsx",
+      "content": "import React from 'react';\nimport { BrowserRouter as Router, Route, Switch } from 'react-router-dom';\nimport Home from './pages/Home';\nimport News from './pages/News';\nimport Community from './pages/Community';\nimport Store from './pages/Store';\nimport Events from './pages/Events';\nimport About from './pages/About';\nimport Navbar from './components/Navbar';\nimport Footer from './components/Footer';\nimport './App.css';\n\nconst App: React.FC = () => {\n  return (\n    <Router>\n      <div className=\"App\">\n        <Navbar />\n        <Switch>\n          <Route path=\"/\" exact component={Home} />\n          <Route path=\"/news\" component={News} />\n          <Route path=\"/community\" component={Community} />\n          <Route path=\"/store\" component={Store} />\n          <Route path=\"/events\" component={Events} />\n          <Route path=\"/about\" component={About} />\n        </Switch>\n        <Footer />\n      </div>\n    </Router>\n  );\n};\n\nexport default App;\n"
+    },
+    {
+      "path": "frontend/src/pages/Home.tsx",
+      "content": "import React from 'react';\nimport HeroSection from '../components/HeroSection';\nimport LatestNews from '../components/LatestNews';\nimport CommunityHighlights from '../components/CommunityHighlights';\nimport FeaturedMerchandise from '../components/FeaturedMerchandise';\nimport UpcomingEvents from '../components/UpcomingEvents';\n\nconst Home: React.FC = () => {\n  return (\n    <div>\n      <HeroSection />\n      <LatestNews />\n      <CommunityHighlights />\n      <FeaturedMerchandise />\n      <UpcomingEvents />\n    </div>\n  );\n};\n\nexport default Home;\n"
+    },
+    {
+      "path": "frontend/src/pages/News.tsx",
+      "content": "import React from 'react';\nimport NewsFeed from '../components/NewsFeed';\n\nconst News: React.FC = () => {\n  return (\n    <div>\n      <h1>Latest WWE News & Updates</h1>\n      <NewsFeed />\n    </div>\n  );\n};\n\nexport default News;\n"
+    },
+    {
+      "path": "frontend/src/pages/Community.tsx",
+      "content": "import React from 'react';\nimport Forum from '../components/Forum';\n\nconst Community: React.FC = () => {\n  return (\n    <div>\n      <h1>Fan Community</h1>\n      <Forum />\n    </div>\n  );\n};\n\nexport default Community;\n"
+    },
+    {
+      "path": "frontend/src/pages/Store.tsx",
+      "content": "import React from 'react';\nimport MerchandiseList from '../components/MerchandiseList';\n\nconst Store: React.FC = () => {\n  return (\n    <div>\n      <h1>Merchandise Store</h1>\n      <MerchandiseList />\n    </div>\n  );\n};\n\nexport default Store;\n"
+    },
+    {
+      "path": "frontend/src/pages/Events.tsx",
+      "content": "import React from 'react';\nimport EventsCalendar from '../components/EventsCalendar';\n\nconst Events: React.FC = () => {\n  return (\n    <div>\n      <h1>Upcoming WWE Events</h1>\n      <EventsCalendar />\n    </div>\n  );\n};\n\nexport default Events;\n"
+    },
+    {
+      "path": "frontend/src/pages/About.tsx",
+      "content": "import React from 'react';\n\nconst About: React.FC = () => {\n  return (\n    <div>\n      <h1>About Us</h1>\n      <p>Welcome to the ultimate WWE fan website, where enthusiasts gather to celebrate their love for wrestling. Our mission is to provide the latest news, engage the community, and offer exclusive merchandise.</p>\n    </div>\n  );\n};\n\nexport default About;\n"
+    },
+    {
+      "path": "frontend/src/components/Navbar.tsx",
+      "content": "import React from 'react';\nimport { Link } from 'react-router-dom';\n\nconst Navbar: React.FC = () => {\n  return (\n    <nav className=\"navbar\">\n      <ul>\n        <li><Link to=\"/\">Home</Link></li>\n        <li><Link to=\"/news\">News</Link></li>\n        <li><Link to=\"/community\">Community</Link></li>\n        <li><Link to=\"/store\">Store</Link></li>\n        <li><Link to=\"/events\">Events</Link></li>\n        <li><Link to=\"/about\">About</Link></li>\n      </ul>\n    </nav>\n  );\n};\n\nexport default Navbar;\n"
+    },
+    {
+      "path": "frontend/src/components/Footer.tsx",
+      "content": "import React from 'react';\n\nconst Footer: React.FC = () => {\n  return (\n    <footer className=\"footer\">\n      <p>&copy; 2025 WWE Fan Website. All rights reserved.</p>\n    </footer>\n  );\n};\n\nexport default Footer;\n"
+    },
+    {
+      "path": "frontend/src/components/HeroSection.tsx",
+      "content": "import React from 'react';\n\nconst HeroSection: React.FC = () => {\n  return (\n    <section className=\"hero\">\n      <h1>Welcome to the WWE Fan Community</h1>\n      <p>Stay updated with the latest WWE news and events.</p>\n    </section>\n  );\n};\n\nexport default HeroSection;\n"
+    },
+    {
+      "path": "frontend/src/components/LatestNews.tsx",
+      "content": "import React from 'react';\n\nconst LatestNews: React.FC = () => {\n  return (\n    <section className=\"latest-news\">\n      <h2>Latest News</h2>\n      <p>Get the latest updates on WWE matches and events.</p>\n    </section>\n  );\n};\n\nexport default LatestNews;\n"
+    },
+    {
+      "path": "frontend/src/components/CommunityHighlights.tsx",
+      "content": "import React from 'react';\n\nconst CommunityHighlights: React.FC = () => {\n  return (\n    <section className=\"community-highlights\">\n      <h2>Community Highlights</h2>\n      <p>Check out the most popular discussions and fan contributions.</p>\n    </section>\n  );\n};\n\nexport default CommunityHighlights;\n"
+    },
+    {
+      "path": "frontend/src/components/FeaturedMerchandise.tsx",
+      "content": "import React from 'react';\n\nconst FeaturedMerchandise: React.FC = () => {\n  return (\n    <section className=\"featured-merchandise\">\n      <h2>Featured Merchandise</h2>\n      <p>Explore our best-selling WWE merchandise.</p>\n    </section>\n  );\n};\n\nexport default FeaturedMerchandise;\n"
+    },
+    {
+      "path": "frontend/src/components/UpcomingEvents.tsx",
+      "content": "import React from 'react';\n\nconst UpcomingEvents: React.FC = () => {\n  return (\n    <section className=\"upcoming-events\">\n      <h2>Upcoming Events</h2>\n      <p>Don't miss out on the next WWE events. Get your tickets now!</p>\n    </section>\n  );\n};\n\nexport default UpcomingEvents;\n"
+    },
+    {
+      "path": "frontend/src/components/NewsFeed.tsx",
+      "content": "import React from 'react';\n\nconst NewsFeed: React.FC = () => {\n  return (\n    <div className=\"news-feed\">\n      <p>News articles will be displayed here.</p>\n    </div>\n  );\n};\n\nexport default NewsFeed;\n"
+    },
+    {
+      "path": "frontend/src/components/Forum.tsx",
+      "content": "import React from 'react';\n\nconst Forum: React.FC = () => {\n  return (\n    <div className=\"forum\">\n      <p>Forum discussions will be displayed here.</p>\n    </div>\n  );\n};\n\nexport default Forum;\n"
+    },
+    {
+      "path": "frontend/src/components/MerchandiseList.tsx",
+      "content": "import React from 'react';\n\nconst MerchandiseList: React.FC = () => {\n  return (\n    <div className=\"merchandise-list\">\n      <p>Merchandise items will be displayed here.</p>\n    </div>\n  );\n};\n\nexport default MerchandiseList;\n"
+    },
+    {
+      "path": "frontend/src/components/EventsCalendar.tsx",
+      "content": "import React from 'react';\n\nconst EventsCalendar: React.FC = () => {\n  return (\n    <div className=\"events-calendar\">\n      <p>Events calendar will be displayed here.</p>\n    </div>\n  );\n};\n\nexport default EventsCalendar;\n"
+    },
+    {
+      "path": "frontend/src/App.css",
+      "content": "body {\n  font-family: 'Arial', sans-serif;\n  margin: 0;\n  padding: 0;\n  background-color: #f4f4f9;\n}\n\n.navbar {\n  background-color: #333;\n  color: #fff;\n  padding: 10px;\n}\n\n.footer {\n  background-color: #333;\n  color: #fff;\n  text-align: center;\n  padding: 10px;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n\n.hero {\n  background-image: url('/images/hero.jpg');\n  background-size: cover;\n  color: #fff;\n  padding: 50px 0;\n  text-align: center;\n}\n\n.latest-news, .community-highlights, .featured-merchandise, .upcoming-events {\n  padding: 20px;\n  margin: 20px 0;\n  background-color: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n"
+    },
+    {
+      "path": "backend/src/index.ts",
+      "content": "import express from 'express';\nimport cors from 'cors';\nimport bodyParser from 'body-parser';\nimport { Pool } from 'pg';\nimport newsRouter from './routes/news';\nimport communityRouter from './routes/community';\nimport storeRouter from './routes/store';\nimport eventsRouter from './routes/events';\nimport authRouter from './routes/auth';\n\nconst app = express();\nconst port = process.env.PORT || 5000;\n\napp.use(cors());\napp.use(bodyParser.json());\n\nconst pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n  ssl: { rejectUnauthorized: false }\n});\n\napp.use('/api/news', newsRouter);\napp.use('/api/community', communityRouter);\napp.use('/api/store', storeRouter);\napp.use('/api/events', eventsRouter);\napp.use('/api/auth', authRouter);\n\napp.listen(port, () => {\n  console.log(`Server is running on port ${port}`);\n});\n"
+    },
+    {
+      "path": "backend/src/routes/news.ts",
+      "content": "import { Router } from 'express';\n\nconst router = Router();\n\nrouter.get('/', async (req, res) => {\n  // Fetch news from database\n  res.json({ message: 'News data' });\n});\n\nexport default router;\n"
+    },
+    {
+      "path": "backend/src/routes/community.ts",
+      "content": "import { Router } from 'express';\n\nconst router = Router();\n\nrouter.get('/', async (req, res) => {\n  // Fetch community discussions from database\n  res.json({ message: 'Community data' });\n});\n\nexport default router;\n"
+    },
+    {
+      "path": "backend/src/routes/store.ts",
+      "content": "import { Router } from 'express';\n\nconst router = Router();\n\nrouter.get('/', async (req, res) => {\n  // Fetch merchandise from database\n  res.json({ message: 'Store data' });\n});\n\nexport default router;\n"
+    },
+    {
+      "path": "backend/src/routes/events.ts",
+      "content": "import { Router } from 'express';\n\nconst router = Router();\n\nrouter.get('/', async (req, res) => {\n  // Fetch events from database\n  res.json({ message: 'Events data' });\n});\n\nexport default router;\n"
+    },
+    {
+      "path": "backend/src/routes/auth.ts",
+      "content": "import { Router } from 'express';\n\nconst router = Router();\n\nrouter.post('/login', async (req, res) => {\n  // Handle user login\n  res.json({ message: 'Login successful' });\n});\n\nrouter.post('/register', async (req, res) => {\n  // Handle user registration\n  res.json({ message: 'Registration successful' });\n});\n\nexport default router;\n"
+    },
+    {
+      "path": "backend/src/models/User.ts",
+      "content": "import { Pool } from 'pg';\n\nconst pool = new Pool();\n\nexport interface User {\n  id: number;\n  username: string;\n  email: string;\n  password: string;\n}\n\nexport const getUserById = async (id: number): Promise<User | null> => {\n  const res = await pool.query('SELECT * FROM users WHERE id = $1', [id]);\n  return res.rows[0] || null;\n};\n\nexport const createUser = async (user: User): Promise<User> => {\n  const res = await pool.query('INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *', [user.username, user.email, user.password]);\n  return res.rows[0];\n};\n"
+    },
+    {
+      "path": "backend/src/models/News.ts",
+      "content": "import { Pool } from 'pg';\n\nconst pool = new Pool();\n\nexport interface News {\n  id: number;\n  title: string;\n  content: string;\n  date: Date;\n}\n\nexport const getAllNews = async (): Promise<News[]> => {\n  const res = await pool.query('SELECT * FROM news ORDER BY date DESC');\n  return res.rows;\n};\n"
+    },
+    {
+      "path": "backend/src/models/Community.ts",
+      "content": "import { Pool } from 'pg';\n\nconst pool = new Pool();\n\nexport interface CommunityPost {\n  id: number;\n  userId: number;\n  content: string;\n  date: Date;\n}\n\nexport const getAllPosts = async (): Promise<CommunityPost[]> => {\n  const res = await pool.query('SELECT * FROM community_posts ORDER BY date DESC');\n  return res.rows;\n};\n"
+    },
+    {
+      "path": "backend/src/models/Store.ts",
+      "content": "import { Pool } from 'pg';\n\nconst pool = new Pool();\n\nexport interface Merchandise {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\n\nexport const getAllMerchandise = async (): Promise<Merchandise[]> => {\n  const res = await pool.query('SELECT * FROM merchandise');\n  return res.rows;\n};\n"
+    },
+    {
+      "path": "backend/src/models/Events.ts",
+      "content": "import { Pool } from 'pg';\n\nconst pool = new Pool();\n\nexport interface Event {\n  id: number;\n  name: string;\n  date: Date;\n  location: string;\n}\n\nexport const getAllEvents = async (): Promise<Event[]> => {\n  const res = await pool.query('SELECT * FROM events ORDER BY date ASC');\n  return res.rows;\n};\n"
+    },
+    {
+      "path": "backend/src/services/authService.ts",
+      "content": "import bcrypt from 'bcrypt';\nimport jwt from 'jsonwebtoken';\nimport { User, getUserById } from '../models/User';\n\nexport const login = async (email: string, password: string): Promise<string | null> => {\n  const user = await getUserById(email);\n  if (user && await bcrypt.compare(password, user.password)) {\n    return jwt.sign({ id: user.id }, process.env.JWT_SECRET || 'secret', { expiresIn: '1h' });\n  }\n  return null;\n};\n"
+    },
+    {
+      "path": "backend/src/services/newsService.ts",
+      "content": "import { News, getAllNews } from '../models/News';\n\nexport const fetchLatestNews = async (): Promise<News[]> => {\n  return await getAllNews();\n};\n"
+    },
+    {
+      "path": "backend/src/services/communityService.ts",
+      "content": "import { CommunityPost, getAllPosts } from '../models/Community';\n\nexport const fetchCommunityPosts = async (): Promise<CommunityPost[]> => {\n  return await getAllPosts();\n};\n"
+    },
+    {
+      "path": "backend/src/services/storeService.ts",
+      "content": "import { Merchandise, getAllMerchandise } from '../models/Store';\n\nexport const fetchMerchandise = async (): Promise<Merchandise[]> => {\n  return await getAllMerchandise();\n};\n"
+    },
+    {
+      "path": "backend/src/services/eventsService.ts",
+      "content": "import { Event, getAllEvents } from '../models/Events';\n\nexport const fetchEvents = async (): Promise<Event[]> => {\n  return await getAllEvents();\n};\n"
+    },
+    {
+      "path": "backend/src/middleware/authMiddleware.ts",
+      "content": "import { Request, Response, NextFunction } from 'express';\nimport jwt from 'jsonwebtoken';\n\nexport const authenticateJWT = (req: Request, res: Response, next: NextFunction) => {\n  const token = req.header('Authorization')?.split(' ')[1];\n  if (!token) {\n    return res.sendStatus(403);\n  }\n\n  jwt.verify(token, process.env.JWT_SECRET || 'secret', (err, user) => {\n    if (err) {\n      return res.sendStatus(403);\n    }\n    req.user = user;\n    next();\n  });\n};\n"
+    },
+    {
+      "path": "backend/src/config/dbConfig.ts",
+      "content": "import { Pool } from 'pg';\n\nexport const pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n  ssl: { rejectUnauthorized: false }\n});\n"
+    },
+    {
+      "path": "backend/src/config/logger.ts",
+      "content": "import { createLogger, format, transports } from 'winston';\n\nconst logger = createLogger({\n  level: 'info',\n  format: format.combine(\n    format.timestamp(),\n    format.json()\n  ),\n  transports: [\n    new transports.Console(),\n    new transports.File({ filename: 'combined.log' })\n  ]\n});\n\nexport default logger;\n"
+    },
+    {
+      "path": "backend/src/utils/errorHandler.ts",
+      "content": "import { Request, Response, NextFunction } from 'express';\n\nexport const errorHandler = (err: Error, req: Request, res: Response, next: NextFunction) => {\n  console.error(err.stack);\n  res.status(500).send('Something broke!');\n};\n"
+    },
+    {
+      "path": "backend/src/utils/responseFormatter.ts",
+      "content": "export const formatResponse = (data: any, message: string = 'Success') => {\n  return {\n    status: 'success',\n    message,\n    data\n  };\n};\n"
+    },
+    {
+      "path": "public/smartsite-link-id.json",
+      "content": "{\n  \"id\": \"733bf2ff-7b42-449c-9757-f873b24b7def\",\n  \"created_at\": \"2025-07-08T21:23:17.325Z\",\n  \"version\": \"1.0\",\n  \"permanent\": true\n}\n"
+    },
+    {
+      "path": "smartsite.config.json",
+      "content": "{\n  \"smartsite_id\": \"733bf2ff-7b42-449c-9757-f873b24b7def\",\n  \"created_at\": \"2025-07-08T21:23:17.325Z\",\n  \"registered\": false,\n  \"app_name\": \"WWE fan website\",\n  \"app_type\": \"enhanced_chatgpt_claude_generation\",\n  \"admin_panel_enabled\": true,\n  \"overlay_protocol_enabled\": true,\n  \"permanent_linkage\": true\n}\n"
+    }
+  ],
+  "dependencies": {
+    "frontend": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.4.0",
+      "typescript": "^4.9.4",
+      "vite": "^4.0.0",
+      "tailwindcss": "^3.2.4",
+      "@shadcn/ui": "^1.0.0"
+    },
+    "backend": {
+      "express": "^4.18.2",
+      "cors": "^2.8.5",
+      "body-parser": "^1.20.1",
+      "pg": "^8.8.0",
+      "bcrypt": "^5.1.0",
+      "jsonwebtoken": "^8.5.1",
+      "winston": "^3.8.1",
+      "typescript": "^4.9.4"
+    }
+  },
+  "scripts": {
+    "frontend": {
+      "start": "vite",
+      "build": "vite build",
+      "dev": "vite"
+    },
+    "backend": {
+      "start": "ts-node src/index.ts",
+      "build": "tsc",
+      "dev": "nodemon src/index.ts"
+    }
+  },
+  "environment": {
+    "frontend": {
+      "VITE_API_URL": "http://localhost:5000/api"
+    },
+    "backend": {
+      "PORT": "5000",
+      "DATABASE_URL": "postgres://user:password@localhost:5432/wwedb",
+      "JWT_SECRET": "your_jwt_secret"
+    }
+  },
+  "setupInstructions": [
+    "1. Clone the repository.",
+    "2. Navigate to the frontend directory and run `npm install` to install dependencies.",
+    "3. Navigate to the backend directory and run `npm install` to install dependencies.",
+    "4. Set up a PostgreSQL database and update the DATABASE_URL in the backend environment.",
+    "5. Run `npm run dev` in both frontend and backend directories to start the development servers.",
+    "6. Access the application at http://localhost:3000."
+  ]
+}
